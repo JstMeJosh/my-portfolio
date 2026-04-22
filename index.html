@@ -29,7 +29,7 @@
             <div class="flex items-center gap-4 md:gap-10 text-[10px] font-bold uppercase tracking-widest">
                 <a href="#me" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">About</a>
                 <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition pb-1">Projects</a>
-                <a href="hhttps://wa.me/2349122656254?text=Hello%20JstMeJosh,%20I'm%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you!" class="bg-green-500 text-slate-950 px-3 py-2 md:px-5 md:py-2.5 rounded-lg hover:bg-green-300 transition shadow-lg shadow-cyan-300/10">Contact</a>
+                <a href="hhttps://wa.me/2349122656254?text=Hello%20JstMeJosh,%20I'm%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you!" class="px-3 py-2 md:px-5 md:py-2.5 rounded-lg  shadow-lg bg-green-600 hover:bg-green-400 text-white transition-colors duration-300 shadow-green-300/10">Contact</a>
             </div>
         </div>
     </nav>
@@ -172,16 +172,20 @@
             </div>
             <div class="md:w-1/2 flex flex-col items-center">
                 <p class="text-slate-500 font-mono text-xs mb-8 uppercase tracking-[0.2em]">Ready to build something extraordinary?</p>
-                <a href="https://wa.me/2349122656254?text=Hello%20JstMeJosh,%20I'm%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you!" class="bg-white text-slate-950 px-10 py-5 rounded-2xl font-black hover:bg-green-300 transition-all transform hover:scale-105 shadow-2xl shadow-white/5">
+                <a href="https://wa.me/2349122656254?text=Hello%20JstMeJosh,%20I'm%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you!" class="bg-green-600 hover:bg-green-400 text-white transition-colors duration-300">
                     HIRE ME ON WHATSAPP
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center text-[10px] text-slate-700 tracking-[0.5em] uppercase">
-        JSTMEJOSH // LAGOS // 2026
-    </footer>
+  <footer class="py-20 text-center text-[10px] text-slate-700 tracking-[0.5em] uppercase">
+    <span id="copyright">JSTMEJOSH // LAGOS // &copy; <span id="year"></span></span>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
