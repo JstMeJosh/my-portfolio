@@ -1,348 +1,750 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JstMeJosh | MERN Architect</title>
 
-    <meta name="title" content="JstMeJosh | MERN Stack Architect">
-    <meta name="description" content="Portfolio of JstMeJosh, a MERN stack developer focusing on secure, scalable systems and clean architecture.">
+    <meta name="title" content="JstMeJosh | MERN Stack Architect" />
+    <meta
+      name="description"
+      content="Portfolio of JstMeJosh, a MERN stack developer focusing on secure, scalable systems and clean architecture."
+    />
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jstmejosh.github.io/my-portfolio/">
-    <meta property="og:title" content="JstMeJosh | MERN Architect">
-    <meta property="og:description" content="Building production-ready solutions with Node.js and React. Driven by logic, perfected by code.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/JstMeJosh/my-portfolio/main/screenshot-1776900652625.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://jstmejosh.github.io/my-portfolio/"
+    />
+    <meta property="og:title" content="JstMeJosh | MERN Architect" />
+    <meta
+      property="og:description"
+      content="Building production-ready solutions with Node.js and React. Driven by logic, perfected by code."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/JstMeJosh/my-portfolio/main/screenshot-1776900652625.png"
+    />
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jstmejosh.github.io/my-portfolio/">
-    <meta property="twitter:title" content="JstMeJosh | MERN Architect">
-    <meta property="twitter:description" content="Building production-ready solutions with Node.js and React.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/JstMeJosh/my-portfolio/main/screenshot-1776900652625.png">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://jstmejosh.github.io/my-portfolio/"
+    />
+    <meta property="twitter:title" content="JstMeJosh | MERN Architect" />
+    <meta
+      property="twitter:description"
+      content="Building production-ready solutions with Node.js and React."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/JstMeJosh/my-portfolio/main/screenshot-1776900652625.png"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <style>
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        .circle-progress { transform: rotate(-90deg); }
-        .glow-card:hover { box-shadow: 0 0 20px rgba(34, 211, 238, 0.15); border-color: rgba(34, 211, 238, 0.4); }
-        .hobby-tag { transition: all 0.3s ease; }
-        .hobby-tag:hover { transform: translateY(-3px); background: rgba(34, 211, 238, 0.1); border-color: #22d3ee; }
-        /* Add slight padding for the sticky nav when scrolling to sections */
-        #projects {
-            scroll-margin-top: 100px;
-        }
-        body {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="%2322d3ee" fill-opacity="0.3" stroke="%2322d3ee" stroke-width="1"/></svg>'), auto;
-}
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      .circle-progress {
+        transform: rotate(-90deg);
+      }
+      .glow-card:hover {
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+        border-color: rgba(34, 211, 238, 0.4);
+      }
+      .hobby-tag {
+        transition: all 0.3s ease;
+      }
+      .hobby-tag:hover {
+        transform: translateY(-3px);
+        background: rgba(34, 211, 238, 0.1);
+        border-color: #22d3ee;
+      }
+      /* Add slight padding for the sticky nav when scrolling to sections */
+      #projects {
+        scroll-margin-top: 100px;
+      }
+      body {
+        cursor:
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="%2322d3ee" fill-opacity="0.3" stroke="%2322d3ee" stroke-width="1"/></svg>'),
+          auto;
+      }
     </style>
-</head>
-<body class="bg-[#0a0f1a] text-slate-100 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
-
-    <nav class="hidden md:block sticky top-0 z-50 bg-[#0a0f1a]/90 backdrop-blur-md border-b border-slate-800/50">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a class="text-xl font-bold tracking-tighter text-cyan-400 uppercase" href="#">JstMeJosh</a>
-        <div class="flex items-center gap-10 text-[10px] font-bold uppercase tracking-widest">
-            <a href="#me" class="text-slate-400 hover:text-cyan-400 transition">About</a>
-            <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition">Projects</a>
-            <a href="#gists" class="text-slate-400 hover:text-cyan-400 transition">Gists</a>
-            <a href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21" class="px-5 py-2.5 rounded-lg bg-green-600 hover:bg-green-400 text-white transition-all shadow-lg shadow-green-300/10">Contact</a>
+  </head>
+  <body
+    class="bg-[#0a0f1a] text-slate-100 font-sans selection:bg-cyan-500/30 overflow-x-hidden"
+  >
+    <nav
+      class="hidden md:block sticky top-0 z-50 bg-[#0a0f1a]/90 backdrop-blur-md border-b border-slate-800/50"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          class="text-xl font-bold tracking-tighter text-cyan-400 uppercase"
+          href="#"
+          >JstMeJosh</a
+        >
+        <div
+          class="flex items-center gap-10 text-[10px] font-bold uppercase tracking-widest"
+        >
+          <a
+            href="#me"
+            id="nav-me"
+            class="nav-link text-slate-400 hover:text-cyan-400 transition"
+            >About</a
+          >
+          <a
+            href="#projects"
+            id="nav-projects"
+            class="nav-link text-slate-400 hover:text-cyan-400 transition"
+            >Projects</a
+          >
+          <a
+            href="#gists"
+            id="nav-gists"
+            class="nav-link text-slate-400 hover:text-cyan-400 transition"
+            >Gists</a
+          >
+          <a
+            href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21"
+            class="px-5 py-2.5 rounded-lg bg-green-600 hover:bg-green-400 text-white transition-all shadow-lg shadow-green-300/10"
+            >Contact</a
+          >
         </div>
-    </div>
-</nav>
-<!-- Mobile view -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0d1425]/95 backdrop-blur-lg border-t border-slate-800/50 pb-safe">
-    <div class="flex justify-around items-center py-3">
-        <a href="#me" class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400">
-            <i class="fa-solid fa-user-ninja text-lg"></i>
-            <span class="text-[9px] font-bold uppercase tracking-tighter">About</span>
+      </div>
+    </nav>
+    <!-- Mobile view -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0d1425]/95 backdrop-blur-lg border-t border-slate-800/50 pb-safe"
+    >
+      <div class="flex justify-around items-center py-3">
+        <a
+          href="#me"
+          class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400"
+        >
+          <i class="fa-solid fa-user-ninja text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter"
+            >About</span
+          >
         </a>
-        <a href="#projects" class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400">
-            <i class="fa-solid fa-code-branch text-lg"></i>
-            <span class="text-[9px] font-bold uppercase tracking-tighter">Projects</span>
+        <a
+          href="#projects"
+          class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400"
+        >
+          <i class="fa-solid fa-code-branch text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter"
+            >Projects</span
+          >
         </a>
-        <a href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21" class="flex flex-col items-center -mt-8">
-            <div class="bg-green-500 p-4 rounded-full shadow-lg shadow-green-500/40 border-4 border-[#0a0f1a]">
-                <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
-            </div>
+        <a
+          href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21"
+          class="flex flex-col items-center -mt-8"
+        >
+          <div
+            class="bg-green-500 p-4 rounded-full shadow-lg shadow-green-500/40 border-4 border-[#0a0f1a]"
+          >
+            <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+          </div>
         </a>
-        <a href="#gists" class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400">
-            <i class="fa-solid fa-scroll text-lg"></i>
-            <span class="text-[9px] font-bold uppercase tracking-tighter">Gists</span>
+        <a
+          href="#gists"
+          class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400"
+        >
+          <i class="fa-solid fa-scroll text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter"
+            >Gists</span
+          >
         </a>
-        <a href="https://github.com/JstMeJosh" class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400">
-            <i class="fa-brands fa-github text-lg"></i>
-            <span class="text-[9px] font-bold uppercase tracking-tighter">GitHub</span>
+        <a
+          href="https://github.com/JstMeJosh"
+          class="flex flex-col items-center gap-1 text-slate-400 active:text-cyan-400"
+        >
+          <i class="fa-brands fa-github text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter"
+            >GitHub</span
+          >
         </a>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <header class="max-w-5xl mx-auto px-6 py-16 md:py-24 text-center">
-        <div class="relative inline-block mb-10">
-            <div class="absolute inset-0 bg-cyan-500 rounded-full blur-xl opacity-20"></div>
-            <img 
-                src="jstmejosh.png" 
-                alt="JstMeJosh Profile" 
-                class="relative h-28 w-28 md:h-32 md:w-32 rounded-full border-4 border-cyan-500/30 object-cover shadow-2xl mx-auto"
-                onerror="this.src='https://via.placeholder.com/150/0a0f1a/22d3ee?text=JstMeJosh'; this.alt='Profile Placeholder';"
-            />
-        </div>
+      <div class="relative inline-block mb-10">
+        <div
+          class="absolute inset-0 bg-cyan-500 rounded-full blur-xl opacity-20"
+        ></div>
+        <img
+          src="jstmejosh.png"
+          alt="JstMeJosh Profile"
+          class="relative h-28 w-28 md:h-32 md:w-32 rounded-full border-4 border-cyan-500/30 object-cover shadow-2xl mx-auto"
+          onerror="
+            this.src =
+              'https://via.placeholder.com/150/0a0f1a/22d3ee?text=JstMeJosh';
+            this.alt = 'Profile Placeholder';
+          "
+        />
+      </div>
 
-        <div class="max-w-3xl mx-auto">
-            <div class="inline-block px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-[10px] font-bold mb-6 uppercase tracking-widest">
-                Engineering the Future
-            </div>
-            <h2 class="text-5xl md:text-8xl font-black mb-8 leading-tight md:leading-[0.85]">
-                MERN <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Architect.</span>
-            </h2>
-            <p class="text-base md:text-xl text-slate-400 leading-relaxed border-l-2 border-cyan-500/50 pl-6 text-left mx-auto max-w-xl">
-                Building secure, scalable systems with <strong>Node.js</strong> and <strong>React</strong>. I specialize in system integrity, middleware patterns, and clean architecture.
-            </p>
+      <div class="max-w-3xl mx-auto">
+        <div
+          class="inline-block px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-[10px] font-bold mb-6 uppercase tracking-widest"
+        >
+          Engineering the Future
         </div>
+        <h2
+          class="text-5xl md:text-8xl font-black mb-8 leading-tight md:leading-[0.85]"
+        >
+          MERN <br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600"
+            >Architect.</span
+          >
+        </h2>
+        <p
+          class="text-base md:text-xl text-slate-400 leading-relaxed border-l-2 border-cyan-500/50 pl-6 text-left mx-auto max-w-xl"
+        >
+          Building secure, scalable systems with <strong>Node.js</strong> and
+          <strong>React</strong>. I specialize in system integrity, middleware
+          patterns, and clean architecture.
+        </p>
+      </div>
     </header>
 
     <section class="max-w-5xl mx-auto px-6 py-12" id="me">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="flex flex-col items-center group">
-                <div class="relative h-24 w-24 flex items-center justify-center">
-                    <svg class="absolute inset-0 h-full w-full circle-progress" viewBox="0 0 128 128">
-                        <circle class="text-slate-800" stroke-width="4" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                        <circle class="text-emerald-500" stroke-width="4" stroke-dasharray="364.4" stroke-dashoffset="109" stroke-linecap="round" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                    </svg>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="h-8 w-8 z-10" alt="MongoDB">
-                </div>
-                <span class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest">MONGODB</span>
-            </div>
-            <div class="flex flex-col items-center group">
-                <div class="relative h-24 w-24 flex items-center justify-center">
-                    <svg class="absolute inset-0 h-full w-full circle-progress" viewBox="0 0 128 128">
-                        <circle class="text-slate-800" stroke-width="4" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                        <circle class="text-cyan-400" stroke-width="4" stroke-dasharray="364.4" stroke-dashoffset="54" stroke-linecap="round" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                    </svg>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="h-8 w-8 z-10" alt="React">
-                </div>
-                <span class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest">REACT</span>
-            </div>
-            <div class="flex flex-col items-center group">
-                <div class="relative h-24 w-24 flex items-center justify-center">
-                    <svg class="absolute inset-0 h-full w-full circle-progress" viewBox="0 0 128 128">
-                        <circle class="text-slate-800" stroke-width="4" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                        <circle class="text-green-500" stroke-width="4" stroke-dasharray="364.4" stroke-dashoffset="72" stroke-linecap="round" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                    </svg>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="h-8 w-8 z-10" alt="Node">
-                </div>
-                <span class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest">NODE.JS</span>
-            </div>
-            <div class="flex flex-col items-center group">
-                <div class="relative h-24 w-24 flex items-center justify-center">
-                    <svg class="absolute inset-0 h-full w-full circle-progress" viewBox="0 0 128 128">
-                        <circle class="text-slate-800" stroke-width="4" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                        <circle class="text-slate-400" stroke-width="4" stroke-dasharray="364.4" stroke-dashoffset="91" stroke-linecap="round" stroke="currentColor" fill="transparent" r="58" cx="64" cy="64"/>
-                    </svg>
-                    <div class="h-8 w-8 z-10 font-bold text-lg flex items-center justify-center">Ex</div>
-                </div>
-                <span class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest">EXPRESS</span>
-            </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center group">
+          <div class="relative h-24 w-24 flex items-center justify-center">
+            <svg
+              class="absolute inset-0 h-full w-full circle-progress"
+              viewBox="0 0 128 128"
+            >
+              <circle
+                class="text-slate-800"
+                stroke-width="4"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+              <circle
+                class="text-emerald-500"
+                stroke-width="4"
+                stroke-dasharray="364.4"
+                stroke-dashoffset="109"
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+            </svg>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              class="h-8 w-8 z-10"
+              alt="MongoDB"
+            />
+          </div>
+          <span
+            class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest"
+            >MONGODB</span
+          >
         </div>
+        <div class="flex flex-col items-center group">
+          <div class="relative h-24 w-24 flex items-center justify-center">
+            <svg
+              class="absolute inset-0 h-full w-full circle-progress"
+              viewBox="0 0 128 128"
+            >
+              <circle
+                class="text-slate-800"
+                stroke-width="4"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+              <circle
+                class="text-cyan-400"
+                stroke-width="4"
+                stroke-dasharray="364.4"
+                stroke-dashoffset="54"
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+            </svg>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              class="h-8 w-8 z-10"
+              alt="React"
+            />
+          </div>
+          <span
+            class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest"
+            >REACT</span
+          >
+        </div>
+        <div class="flex flex-col items-center group">
+          <div class="relative h-24 w-24 flex items-center justify-center">
+            <svg
+              class="absolute inset-0 h-full w-full circle-progress"
+              viewBox="0 0 128 128"
+            >
+              <circle
+                class="text-slate-800"
+                stroke-width="4"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+              <circle
+                class="text-green-500"
+                stroke-width="4"
+                stroke-dasharray="364.4"
+                stroke-dashoffset="72"
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+            </svg>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              class="h-8 w-8 z-10"
+              alt="Node"
+            />
+          </div>
+          <span
+            class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest"
+            >NODE.JS</span
+          >
+        </div>
+        <div class="flex flex-col items-center group">
+          <div class="relative h-24 w-24 flex items-center justify-center">
+            <svg
+              class="absolute inset-0 h-full w-full circle-progress"
+              viewBox="0 0 128 128"
+            >
+              <circle
+                class="text-slate-800"
+                stroke-width="4"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+              <circle
+                class="text-slate-400"
+                stroke-width="4"
+                stroke-dasharray="364.4"
+                stroke-dashoffset="91"
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="58"
+                cx="64"
+                cy="64"
+              />
+            </svg>
+            <div
+              class="h-8 w-8 z-10 font-bold text-lg flex items-center justify-center"
+            >
+              Ex
+            </div>
+          </div>
+          <span
+            class="mt-2 text-[10px] text-slate-500 font-bold tracking-widest"
+            >EXPRESS</span
+          >
+        </div>
+      </div>
     </section>
 
     <section id="proficiency" class="max-w-5xl mx-auto px-6 py-12">
-    <div class="flex items-center gap-4 mb-10">
-        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.4em]">System Health & Proficiency</h3>
+      <div class="flex items-center gap-4 mb-10">
+        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.4em]">
+          System Health & Proficiency
+        </h3>
         <div class="h-[1px] flex-grow bg-slate-800/50"></div>
-    </div>
+      </div>
 
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-        
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
         <div class="group">
-            <div class="flex justify-between items-end mb-3">
-                <div>
-                    <h4 class="text-sm font-bold text-slate-200 uppercase tracking-widest">Backend Architecture</h4>
-                    <p class="text-[10px] text-slate-500 mt-1">RESTful APIs, Controller Patterns, Node.js</p>
-                </div>
-                <span class="text-cyan-400 font-mono text-sm">95%</span>
+          <div class="flex justify-between items-end mb-3">
+            <div>
+              <h4
+                class="text-sm font-bold text-slate-200 uppercase tracking-widest"
+              >
+                Backend Architecture
+              </h4>
+              <p class="text-[10px] text-slate-500 mt-1">
+                RESTful APIs, Controller Patterns, Node.js
+              </p>
             </div>
-            <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400 w-[95%] group-hover:shadow-[0_0_10px_#22d3ee] transition-all duration-500"></div>
-            </div>
+            <span class="text-cyan-400 font-mono text-sm">95%</span>
+          </div>
+          <div
+            class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800"
+          >
+            <div
+              class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400 w-[95%] group-hover:shadow-[0_0_10px_#22d3ee] transition-all duration-500"
+            ></div>
+          </div>
         </div>
 
         <div class="group">
-            <div class="flex justify-between items-end mb-3">
-                <div>
-                    <h4 class="text-sm font-bold text-slate-200 uppercase tracking-widest">Security Engineering</h4>
-                    <p class="text-[10px] text-slate-500 mt-1">JWT, Bcrypt, Middleware Gatekeepers, Zod</p>
-                </div>
-                <span class="text-purple-400 font-mono text-sm">90%</span>
+          <div class="flex justify-between items-end mb-3">
+            <div>
+              <h4
+                class="text-sm font-bold text-slate-200 uppercase tracking-widest"
+              >
+                Security Engineering
+              </h4>
+              <p class="text-[10px] text-slate-500 mt-1">
+                JWT, Bcrypt, Middleware Gatekeepers, Zod
+              </p>
             </div>
-            <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[90%] group-hover:shadow-[0_0_10px_#a855f7] transition-all duration-500"></div>
-            </div>
+            <span class="text-purple-400 font-mono text-sm">90%</span>
+          </div>
+          <div
+            class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800"
+          >
+            <div
+              class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[90%] group-hover:shadow-[0_0_10px_#a855f7] transition-all duration-500"
+            ></div>
+          </div>
         </div>
 
         <div class="group">
-            <div class="flex justify-between items-end mb-3">
-                <div>
-                    <h4 class="text-sm font-bold text-slate-200 uppercase tracking-widest">Database Design</h4>
-                    <p class="text-[10px] text-slate-500 mt-1">MongoDB, Schema Modeling, Aggregation</p>
-                </div>
-                <span class="text-emerald-400 font-mono text-sm">85%</span>
+          <div class="flex justify-between items-end mb-3">
+            <div>
+              <h4
+                class="text-sm font-bold text-slate-200 uppercase tracking-widest"
+              >
+                Database Design
+              </h4>
+              <p class="text-[10px] text-slate-500 mt-1">
+                MongoDB, Schema Modeling, Aggregation
+              </p>
             </div>
-            <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[85%] group-hover:shadow-[0_0_10px_#10b981] transition-all duration-500"></div>
-            </div>
+            <span class="text-emerald-400 font-mono text-sm">85%</span>
+          </div>
+          <div
+            class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800"
+          >
+            <div
+              class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[85%] group-hover:shadow-[0_0_10px_#10b981] transition-all duration-500"
+            ></div>
+          </div>
         </div>
 
         <div class="group">
-            <div class="flex justify-between items-end mb-3">
-                <div>
-                    <h4 class="text-sm font-bold text-slate-200 uppercase tracking-widest">Frontend Engineering</h4>
-                    <p class="text-[10px] text-slate-500 mt-1">React, Context API, Axios Interceptors, Tailwind</p>
-                </div>
-                <span class="text-blue-400 font-mono text-sm">88%</span>
+          <div class="flex justify-between items-end mb-3">
+            <div>
+              <h4
+                class="text-sm font-bold text-slate-200 uppercase tracking-widest"
+              >
+                Frontend Engineering
+              </h4>
+              <p class="text-[10px] text-slate-500 mt-1">
+                React, Context API, Axios Interceptors, Tailwind
+              </p>
             </div>
-            <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-[88%] group-hover:shadow-[0_0_10px_#3b82f6] transition-all duration-500"></div>
-            </div>
+            <span class="text-blue-400 font-mono text-sm">88%</span>
+          </div>
+          <div
+            class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800"
+          >
+            <div
+              class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-[88%] group-hover:shadow-[0_0_10px_#3b82f6] transition-all duration-500"
+            ></div>
+          </div>
         </div>
-
-    </div>
-</section>
+      </div>
+    </section>
 
     <section class="max-w-5xl mx-auto px-6 py-12">
-        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.4em] mb-8">Logic & Lifestyle</h3>
-        <div class="flex flex-wrap gap-4">
-            <div class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3">
-                <i class="fas fa-cube text-orange-500"></i> <span class="text-sm font-medium">Rubik's Cube Solver</span>
-            </div>
-            <div class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3">
-                <i class="fas fa-chess text-white"></i> <span class="text-sm font-medium">Chess Strategist</span>
-            </div>
-            <div class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3">
-                <i class="fas fa-plane text-cyan-400"></i> <span class="text-sm font-medium">Travelling</span>
-            </div>
-            <div class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3">
-                <i class="fas fa-book text-emerald-400"></i> <span class="text-sm font-medium">Reading</span>
-            </div>
-            <div class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3">
-                <i class="fas fa-music text-purple-400"></i> <span class="text-sm font-medium">Music Enthusiast</span>
-            </div>
+      <h3
+        class="text-xs font-bold text-slate-500 uppercase tracking-[0.4em] mb-8"
+      >
+        Logic & Lifestyle
+      </h3>
+      <div class="flex flex-wrap gap-4">
+        <div
+          class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3"
+        >
+          <i class="fas fa-cube text-orange-500"></i>
+          <span class="text-sm font-medium">Rubik's Cube Solver</span>
         </div>
+        <div
+          class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3"
+        >
+          <i class="fas fa-chess text-white"></i>
+          <span class="text-sm font-medium">Chess Strategist</span>
+        </div>
+        <div
+          class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3"
+        >
+          <i class="fas fa-plane text-cyan-400"></i>
+          <span class="text-sm font-medium">Travelling</span>
+        </div>
+        <div
+          class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3"
+        >
+          <i class="fas fa-book text-emerald-400"></i>
+          <span class="text-sm font-medium">Reading</span>
+        </div>
+        <div
+          class="hobby-tag bg-slate-900 border border-slate-800 px-5 py-3 rounded-2xl flex items-center gap-3"
+        >
+          <i class="fas fa-music text-purple-400"></i>
+          <span class="text-sm font-medium">Music Enthusiast</span>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="max-w-5xl mx-auto px-6 py-16">
-        <h3 class="text-3xl font-bold mb-10">Selected Builds</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-bold mb-2 text-cyan-400">SkillSwap</h4>
-                    <p class="text-slate-400 text-sm mb-6">MERN marketplace for knowledge exchange. Features JWT Auth, secure hashing, and custom middleware.</p>
-                </div>
-                <a href="https://skillswap-delta-eight.vercel.app/" target="_blank" class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest">Live Demo →</a>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-bold mb-2 text-cyan-400">FlickFinder</h4>
-                    <p class="text-slate-400 text-sm mb-6">React Movie app utilizing TMDB API with real-time search and global state management.</p>
-                </div>
-                <a href="https://flickfinder-one.vercel.app/" target="_blank" class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest">Live Demo →</a>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-bold mb-2 text-cyan-400">Prime Calc</h4>
-                    <p class="text-slate-400 text-sm mb-6">Interactive mathematical tool built with high-logic ES6+ JavaScript and Tailwind styling.</p>
-                </div>
-                <a href="https://jstmejosh.github.io/primeNumberCalculator/" target="_blank" class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest">Live Demo →</a>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-bold mb-2 text-cyan-400">Social UI Clone</h4>
-                    <p class="text-slate-400 text-sm mb-6">Pixel-perfect front-end clone focusing on responsive form design and clean CSS architecture.</p>
-                </div>
-                <a href="https://jstmejosh.github.io/SignUpClone/" target="_blank" class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest">Live Demo →</a>
-            </div>
-
+      <h3 class="text-3xl font-bold mb-10">Selected Builds</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between"
+        >
+          <div>
+            <h4 class="text-xl font-bold mb-2 text-cyan-400">SkillSwap</h4>
+            <p class="text-slate-400 text-sm mb-6">
+              MERN marketplace for knowledge exchange. Features JWT Auth, secure
+              hashing, and custom middleware.
+            </p>
+          </div>
+          <a
+            href="https://skillswap-delta-eight.vercel.app/"
+            target="_blank"
+            class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest"
+            >Live Demo →</a
+          >
         </div>
-        <div class="mt-16 text-center">
-            <a href="https://github.com/JstMeJosh?tab=repositories" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-cyan-400 font-bold uppercase tracking-widest text-xs hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all duration-300 group">
-        Explore Full Repository <i class="fa-brands fa-github text-lg group-hover:rotate-12 transition-transform"></i>
+
+        <div
+          class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between"
+        >
+          <div>
+            <h4 class="text-xl font-bold mb-2 text-cyan-400">FlickFinder</h4>
+            <p class="text-slate-400 text-sm mb-6">
+              React Movie app utilizing TMDB API with real-time search and
+              global state management.
+            </p>
+          </div>
+          <a
+            href="https://flickfinder-one.vercel.app/"
+            target="_blank"
+            class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest"
+            >Live Demo →</a
+          >
+        </div>
+
+        <div
+          class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between"
+        >
+          <div>
+            <h4 class="text-xl font-bold mb-2 text-cyan-400">Prime Calc</h4>
+            <p class="text-slate-400 text-sm mb-6">
+              Interactive mathematical tool built with high-logic ES6+
+              JavaScript and Tailwind styling.
+            </p>
+          </div>
+          <a
+            href="https://jstmejosh.github.io/primeNumberCalculator/"
+            target="_blank"
+            class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest"
+            >Live Demo →</a
+          >
+        </div>
+
+        <div
+          class="bg-slate-900 border border-slate-800 p-8 rounded-3xl glow-card transition flex flex-col justify-between"
+        >
+          <div>
+            <h4 class="text-xl font-bold mb-2 text-cyan-400">
+              Social UI Clone
+            </h4>
+            <p class="text-slate-400 text-sm mb-6">
+              Pixel-perfect front-end clone focusing on responsive form design
+              and clean CSS architecture.
+            </p>
+          </div>
+          <a
+            href="https://jstmejosh.github.io/SignUpClone/"
+            target="_blank"
+            class="text-xs font-bold text-white hover:text-cyan-400 transition uppercase tracking-widest"
+            >Live Demo →</a
+          >
+        </div>
+      </div>
+      <div class="mt-16 text-center">
+        <a
+          href="https://github.com/JstMeJosh?tab=repositories"
+          target="_blank"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-cyan-400 font-bold uppercase tracking-widest text-xs hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all duration-300 group"
+        >
+          Explore Full Repository
+          <i
+            class="fa-brands fa-github text-lg group-hover:rotate-12 transition-transform"
+          ></i>
         </a>
-</div>
+      </div>
     </section>
-    
-<section id="gists" class="max-w-5xl mx-auto px-6 py-12">
-    <div class="flex items-center gap-4 mb-10">
+
+    <section id="gists" class="max-w-5xl mx-auto px-6 py-12">
+      <div class="flex items-center gap-4 mb-10">
         <h3 class="text-3xl font-bold">Architectural Gists</h3>
         <div class="h-[1px] flex-grow bg-slate-800"></div>
-    </div>
-    
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-cyan-500/50 transition-all group">
-            <div class="flex justify-between items-start mb-6">
-                <div class="p-3 bg-cyan-500/10 rounded-xl">
-                    <i class="fa-solid fa-sitemap text-cyan-400 text-2xl"></i>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-cyan-400 text-sm"></i>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-cyan-500/50 transition-all group"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div class="p-3 bg-cyan-500/10 rounded-xl">
+              <i class="fa-solid fa-sitemap text-cyan-400 text-2xl"></i>
             </div>
-            <h4 class="text-xl font-bold mb-3">MERN Architecture Guide</h4>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                The definitive blueprint for production-ready MERN apps. Covers folder structure, separation of concerns, and clean entry points.
-            </p>
-            <a href="https://gist.github.com/JstMeJosh/b14916056f12136f37e4b16be96a78c0" target="_blank" class="text-xs font-bold text-cyan-400 uppercase tracking-widest border-b border-cyan-400/20 pb-1 hover:border-cyan-400 transition-all">
-                Read Documentation →
-            </a>
+            <i
+              class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-cyan-400 text-sm"
+            ></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">MERN Architecture Guide</h4>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            The definitive blueprint for production-ready MERN apps. Covers
+            folder structure, separation of concerns, and clean entry points.
+          </p>
+          <a
+            href="https://gist.github.com/JstMeJosh/b14916056f12136f37e4b16be96a78c0"
+            target="_blank"
+            class="text-xs font-bold text-cyan-400 uppercase tracking-widest border-b border-cyan-400/20 pb-1 hover:border-cyan-400 transition-all"
+          >
+            Read Documentation →
+          </a>
         </div>
 
-        <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-purple-500/50 transition-all group">
-            <div class="flex justify-between items-start mb-6">
-                <div class="p-3 bg-purple-500/10 rounded-xl">
-                    <i class="fa-solid fa-shield-halved text-purple-400 text-2xl"></i>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-purple-400 text-sm"></i>
+        <div
+          class="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-purple-500/50 transition-all group"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div class="p-3 bg-purple-500/10 rounded-xl">
+              <i class="fa-solid fa-shield-halved text-purple-400 text-2xl"></i>
             </div>
-            <h4 class="text-xl font-bold mb-3">Auth Middleware Strategy</h4>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                A secure "Gatekeeper" pattern for Express. Handles JWT verification, user extraction, and role-based route protection.
-            </p>
-            <a href="https://gist.github.com/JstMeJosh/960fa850c379b5ca2674fcb1938921d6" target="_blank" class="text-xs font-bold text-purple-400 uppercase tracking-widest border-b border-purple-400/20 pb-1 hover:border-purple-400 transition-all">
-                View Logic →
-            </a>
+            <i
+              class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-purple-400 text-sm"
+            ></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Auth Middleware Strategy</h4>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            A secure "Gatekeeper" pattern for Express. Handles JWT verification,
+            user extraction, and role-based route protection.
+          </p>
+          <a
+            href="https://gist.github.com/JstMeJosh/960fa850c379b5ca2674fcb1938921d6"
+            target="_blank"
+            class="text-xs font-bold text-purple-400 uppercase tracking-widest border-b border-purple-400/20 pb-1 hover:border-purple-400 transition-all"
+          >
+            View Logic →
+          </a>
         </div>
-    </div>
-</section>
-    
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <div class="bg-gradient-to-br from-slate-900 to-[#050a14] border border-slate-800 rounded-[2.5rem] p-8 md:p-16 text-center md:text-left flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <h3 class="text-3xl font-bold mb-4 italic text-cyan-400">Coding DNA</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-8">My GitHub activity reflects a commitment to clean code and architectural precision.</p>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JstMeJosh&layout=compact&theme=vision-friendly-dark&hide_border=true&bg_color=00000000&hide=html,css" class="w-full" />
-            </div>
-            <div class="md:w-1/2 flex flex-col items-center">
-                <p class="text-slate-500 font-mono text-xs mb-8 uppercase tracking-[0.2em]">Ready to build something extraordinary?</p>
-                <a href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21" 
-   class="bg-green-600 hover:bg-green-400 text-white transition-colors duration-300 p-4 rounded-2xl">
-   HIRE ME ON WHATSAPP
-</a>
-            </div>
-        </div>
+      </div>
     </section>
 
-  <footer class="py-20 text-center text-[10px] text-cyan-300 tracking-[0.5em] uppercase">
-    <span id="copyright">JSTMEJOSH // LAGOS // &copy; <span id="year"></span></span>
-</footer>
+    <section class="max-w-5xl mx-auto px-6 py-12">
+      <div
+        class="bg-gradient-to-br from-slate-900 to-[#050a14] border border-slate-800 rounded-[2.5rem] p-8 md:p-16 text-center md:text-left flex flex-col md:flex-row items-center gap-12"
+      >
+        <div class="md:w-1/2">
+          <h3 class="text-3xl font-bold mb-4 italic text-cyan-400">
+            Coding DNA
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-8">
+            My GitHub activity reflects a commitment to clean code and
+            architectural precision.
+          </p>
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=JstMeJosh&layout=compact&theme=vision-friendly-dark&hide_border=true&bg_color=00000000&hide=html,css"
+            class="w-full"
+          />
+        </div>
+        <div class="md:w-1/2 flex flex-col items-center">
+          <p
+            class="text-slate-500 font-mono text-xs mb-8 uppercase tracking-[0.2em]"
+          >
+            Ready to build something extraordinary?
+          </p>
+          <a
+            href="https://wa.me/2349122656254?text=Hello%20JstMeJosh%2C%20I%27m%20interested%20in%20discussing%20a%20MERN%20stack%20project%20with%20you%21"
+            class="bg-green-600 hover:bg-green-400 text-white transition-colors duration-300 p-4 rounded-2xl"
+          >
+            HIRE ME ON WHATSAPP
+          </a>
+        </div>
+      </div>
+    </section>
 
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer
+      class="py-20 text-center text-[10px] text-cyan-300 tracking-[0.5em] uppercase"
+    >
+      <span id="copyright"
+        >JSTMEJOSH // LAGOS // &copy; <span id="year"></span
+      ></span>
+    </footer>
 
-</body>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      // Scroll Spy Logic
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -70% 0px", // Trigger when section is in the upper portion of viewport
+        threshold: 0,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+
+            navLinks.forEach((link) => {
+              // Remove cyan and reset to slate
+              link.classList.remove("text-cyan-400");
+              link.classList.add("text-slate-400");
+
+              // If link href matches the section id, turn it cyan
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("text-cyan-400");
+                link.classList.remove("text-slate-400");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </body>
 </html>
