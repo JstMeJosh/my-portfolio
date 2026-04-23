@@ -731,12 +731,12 @@
 
             navLinks.forEach((link) => {
               // Remove cyan and reset to slate
-              link.classList.remove("text-cyan-400");
+             link.classList.remove("text-cyan-400", "border-b-2", "border-white", "pb-1");
               link.classList.add("text-slate-400");
 
               // If link href matches the section id, turn it cyan
               if (link.getAttribute("href") === `#${id}`) {
-                link.classList.add("text-cyan-400 border-b-2 border-white pb-2");
+                link.classList.add("text-cyan-400", "border-b-2", "border-white", "pb-1");
                 link.classList.remove("text-slate-400");
               }
             });
